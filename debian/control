@@ -1,0 +1,13 @@
+Source: fbd
+Section: unknown
+Priority: extra
+Maintainer: Kevron Rees <tripzero@nextabyte.com>
+Build-Depends: debhelper (>= 7), libqt4-dev, libusb-dev, cdbs
+Standards-Version: 3.8.1
+Homepage: http://openice.org
+
+Package: fbd
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Daemon for integration with the fusion brain device via dbus
+ fbd provides a dbus interface for communicating with the fusion brain i/o device. Fbd is part of the OpenICE project.

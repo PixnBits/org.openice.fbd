@@ -1,0 +1,10 @@
+Package: fbd
+Version: 0.0.1-0
+Section: utilities
+Priority: optional
+Architecture: i386
+Maintainer: Kevron Rees [tripzero@nextabyte.com]
+Depends: libqt4-core (>= 4.5), libusb-0.1-4 (>= 0.1.12), libdbus-1-3
+Replaces: fbd
+Provides: fbd
+Description: fbd is a daemon that allows interaction with the fusion brain device

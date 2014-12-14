@@ -1,0 +1,28 @@
+ <!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+ "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+ <node>
+  <interface name="org.openice.fbd.fusionbrain" >
+	
+	<method name="SetSingleOutput" >
+		<arg direction="in" type="i" name="ionum" />
+		<arg direction="in" type="b" name="active" />
+	</method>
+	
+	<method name="SetAllOutput" >
+		<arg direction="in" type="i" name="low" />
+		<arg direction="in" type="i" name="high" />
+	</method>
+	
+	<method name="GetAnalogValue" >
+		<arg direction="in" type="i" name="ionum" />
+		<arg direction="in" type="i" name="samplenum" />
+		<arg direction="out" type="d" name="value" />
+	</method>
+	
+	<signal name="AnalogValueChanged" >
+		<arg direction="out" type="i" name="analognum" />
+		<arg direction="out" type="i" name="value" />
+	</signal>
+	
+  </interface>
+</node>
