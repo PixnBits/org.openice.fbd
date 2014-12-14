@@ -1,0 +1,14 @@
+# built files
+Makefile
+fb.o
+fbd
+fbd.o
+fbddbus.o
+fblib.o
+main.o
+moc_fb.cpp
+moc_fb.o
+moc_fbd.cpp
+moc_fbd.o
+moc_fbddbus.cpp
+moc_fbddbus.o

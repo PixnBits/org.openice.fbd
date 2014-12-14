@@ -1,0 +1,13 @@
+# Check for FusionBrain.
+ACTION!="add", GOTO="fb_rules_remove"
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", GOTO="fb_add"
+SUBSYSTEM!="usb_device", GOTO="fb_rules_end"
+LABEL="fb_add"
+ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="000e", RUN+="/usr/local/bin/fbd >/dev/null 2>&1 &"
+LABEL="fb_rules_remove"
+ACTION!="remove", GOTO="fb_rules_end"
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", GOTO="fb_remove"
+SUBSYSTEM!="usb_device", GOTO="fb_rules_end"
+LABEL="fb_remove"
+ENV{ID_MODEL}=="Fusion_Brain", RUN+="/usr/bin/killall fbd"
+LABEL="fb_rules_end"
