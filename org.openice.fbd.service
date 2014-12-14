@@ -1,0 +1,5 @@
+[D-BUS Service]
+Name=org.openice.fbd
+Exec=/usr/bin/fbd
+User=root
+
