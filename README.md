@@ -19,7 +19,7 @@ and compile
 `qmake && make`
 
 
-Copy the binary `fbd` to `/usr/bin`
+Copy the binary `fbd` to `/usr/local/bin`
 
 `sudo cp fbd /usr/local/bin`
 
